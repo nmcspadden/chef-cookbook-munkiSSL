@@ -2,7 +2,7 @@
 # Cookbook Name:: munkiSSL
 # Recipe:: munki
 #
-# Copyright 2015, YOUR_COMPANY_NAME
+# Copyright 2015, Nick McSpadden
 #
 # All rights reserved - Do Not Redistribute
 #
@@ -16,17 +16,17 @@ directory "/Library/Managed\ Installs/certs" do
 end
 
 file "/Library/Managed\ Installs/certs/ca.pem" do
-  content IO.read("/etc/ssl/chef_ca.cert")
+  content IO.read("/etc/ssl/munki2_ca.cert")
   action :create
 end
 
 file "/Library/Managed\ Installs/certs/clientcert.pem" do
-  content IO.read("/etc/ssl/chef.sacredsf.org.cert")
+  content IO.read("/etc/ssl/munki2.sacredsf.org.cert")
   action :create
 end
 
 file "/Library/Managed\ Installs/certs/clientkey.pem" do
-  content IO.read("/etc/ssl/chef.sacredsf.org.key")
+  content IO.read("/etc/ssl/munki2.sacredsf.org.key")
   action :create
 end
 
