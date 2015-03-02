@@ -12,7 +12,7 @@ directory "/Library/Managed\ Installs/certs" do
   recursive true
   owner "root"
   owner "admin"
-  mode "0755"
+  mode "0700"
 end
 
 file "/Library/Managed\ Installs/certs/ca.pem" do
