@@ -16,12 +16,12 @@ directory "/Library/Managed\ Installs/certs" do
 end
 
 file "/Library/Managed\ Installs/certs/ca.pem" do
-  content IO.read("/etc/ssl/munki2_ca.cert")
+  content IO.read("/etc/ssl/munki2_ca.crt")
   action :create
 end
 
 file "/Library/Managed\ Installs/certs/clientcert.pem" do
-  content IO.read("/etc/ssl/munki2.sacredsf.org.cert")
+  content IO.read("/etc/ssl/munki2.sacredsf.org.crt")
   action :create
 end
 
