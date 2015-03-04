@@ -7,6 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
+include_recipe "chef-client::delete_validation"
 
 directory "/Library/Managed\ Installs/certs" do
   recursive true
@@ -30,7 +31,6 @@ file "/Library/Managed\ Installs/certs/clientkey.pem" do
   action :create
 end
 
-# Not sure if this will work
 file "/Users/Shared/.com.googlecode.munki.checkandinstallatstartup" do
   action :create
 end
